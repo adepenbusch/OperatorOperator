@@ -22,8 +22,9 @@ GameObject:
   - component: {fileID: 33817398980560326}
   - component: {fileID: 136410219248262328}
   - component: {fileID: 23223928601265124}
+  - component: {fileID: 114889145059086088}
   m_Layer: 0
-  m_Name: Button
+  m_Name: Plug
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -36,7 +37,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1792183463570224}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.55, y: -0.33, z: 3.36}
+  m_LocalPosition: {x: -3.55, y: -0.33, z: 2.49}
   m_LocalScale: {x: 1.229105, y: 0.63577616, z: 1.2291058}
   m_Children: []
   m_Father: {fileID: 0}
@@ -83,6 +84,19 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1792183463570224}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &114889145059086088
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1792183463570224}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3702ac1c519074b72830306980f35efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  row: 0
+  column: 0
 --- !u!136 &136410219248262328
 CapsuleCollider:
   m_ObjectHideFlags: 1

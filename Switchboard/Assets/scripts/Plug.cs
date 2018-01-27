@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Plug : MonoBehaviour {
 
-	int row;
-	int column;
+	public int row;
+	public int column;
 
 
 	// Use this for initialization
