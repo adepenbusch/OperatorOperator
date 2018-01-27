@@ -14,6 +14,7 @@ public class GameController : MonoBehaviour {
 	private GameObject startPlug;
 	private GameObject endPlug;
 
+    public Cord cord;
 
 	// Use this for initialization
 	void Start () {
@@ -34,12 +35,16 @@ public class GameController : MonoBehaviour {
 	public void triggerPlug(GameObject plug) {
 		if (plug == startPlug) {
 			startPlug = null;
+            cord.RemoveStart();
 		} else if (plug == endPlug) {
 			endPlug = null;
+            cord.RemoveEnd();
 		} else if (startPlug == null) {
 			startPlug = plug;
+            cord.SetStart(plug.transform);
 		} else if (endPlug == null) {
 			endPlug = plug;
+            cord.SetEnd(plug.transform);
 		} else {
 			// Do nothing because both plugs are assigned
 		}
