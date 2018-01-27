@@ -11,6 +11,8 @@ sysinfo.txt
 /Assets/AssetStoreTools*
 *.apk
 *.unitypackage
+Temp/
+Library/
  
 # ============ #
 # OS generated #
