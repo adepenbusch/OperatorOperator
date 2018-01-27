@@ -4,11 +4,11 @@
 [Tt]emp/
 [Oo]bj/
 [Bb]uild
-/[Bb]uilds/
-/[Ll]ibrary/
+Switchboard/[Bb]uilds/
+Switchboard/[Ll]ibrary/
 sysinfo.txt
 *.stackdump
-/Assets/AssetStoreTools*
+/Switchboard/Assets/AssetStoreTools*
 *.apk
 *.unitypackage
 Temp/
