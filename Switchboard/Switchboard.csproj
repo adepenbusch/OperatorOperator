@@ -285,7 +285,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\PlayerMove.cs" />
     <Compile Include="Assets\Prototype Materials\ShowcaseMovement.cs" />
+    <Compile Include="Assets\scripts\Cord.cs" />
     <Compile Include="Assets\scripts\GameController.cs" />
     <Compile Include="Assets\scripts\Highlightable.cs" />
     <Compile Include="Assets\scripts\Plug.cs" />
