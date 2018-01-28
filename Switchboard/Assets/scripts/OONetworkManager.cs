@@ -15,7 +15,7 @@ namespace Assets.scripts
         public override void OnServerAddPlayer(NetworkConnection conn, short playerControllerId)
         {
             GameObject player = (GameObject)Instantiate(playerPrefab, Vector3.zero, Quaternion.identity);
-            player.GetComponent<Player>().plugCoordinates = new PlugCoordinates();
+            player.GetComponent<Player>().plugCoordinates = new PlugEnds();
             player.GetComponent<Player>().playerId = playerControllerId;
             NetworkServer.AddPlayerForConnection(conn, player, playerControllerId);
         }
