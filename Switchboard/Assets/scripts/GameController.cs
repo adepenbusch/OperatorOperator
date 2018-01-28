@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using Assets.scripts;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -16,8 +17,10 @@ public class GameController : MonoBehaviour {
 
     public Cord cord;
 
-	// Use this for initialization
-	void Start () {
+    private PlugEnds[] requestEnds;
+
+    // Use this for initialization
+    void Start () {
 		InstantiatePlugs ();
 	}
 
@@ -46,10 +49,16 @@ public class GameController : MonoBehaviour {
 			endPlug = plug;
             cord.SetEnd(plug.transform);
 		} else {
-			// Do nothing because both plugs are assigned
+            // Do nothing because both plugs are assigned
+            var plugs = toPlugEnds();
+            if (plugs != null)
+            {
+                isValidTransmission(plugs);
+            }
+
 		}
 
-
+        
 		var _startPlug = (startPlug != null) ? startPlug.GetComponent<Plug> ().ToString () : "null";
 		var _endPlug = (endPlug != null) ? endPlug.GetComponent<Plug> ().ToString () : "null";
 		Debug.Log ("startPlug: " + _startPlug + "| endPlug: " + _endPlug);
@@ -59,4 +68,33 @@ public class GameController : MonoBehaviour {
 	void Update () {
 		
 	}
+
+    private PlugEnds toPlugEnds()
+    {
+        var _startPlug = (startPlug != null) ? startPlug.GetComponent<Plug>().ToString() : "null";
+        var _endPlug = (endPlug != null) ? endPlug.GetComponent<Plug>().ToString() : "null";
+        int x1, x2, y1, y2;
+        int.TryParse(_startPlug.Substring(4, 1),out x1);
+        int.TryParse(_startPlug.Substring(4, 1), out x2);
+        int.TryParse(_endPlug.Substring(7, 1), out y1);
+        int.TryParse(_endPlug.Substring(7, 1), out y2);
+        return new PlugEnds(x1,y1,x2,y2);
+    }
+    
+
+    /*
+     * Validate a plugging attempt. If this is valid, we need to let the world know that someone succeeded.
+     *      If it is not valid, do nothing.
+     */
+    private bool isValidTransmission(PlugEnds attemptedPlugCoordinates)
+    {
+        foreach (PlugEnds curPlugCoordinate in requestEnds)
+        {
+            if (curPlugCoordinate.Equals(attemptedPlugCoordinates))
+            {
+                return true;
+            }
+        }
+        return false;
+    }
 }

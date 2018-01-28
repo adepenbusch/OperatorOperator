@@ -13,7 +13,7 @@ namespace Assets.scripts
     class Player : NetworkBehaviour
     {
         [SyncVar]
-        public PlugCoordinates plugCoordinates;
+        public PlugEnds plugCoordinates;
         [SyncVar]
         public int playerId;
 

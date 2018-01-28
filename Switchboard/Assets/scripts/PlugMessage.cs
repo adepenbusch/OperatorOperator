@@ -15,7 +15,7 @@ namespace Assets.scripts
      */
     class PlugMessage : MessageBase
     {
-        public PlugCoordinates plugCoordinates;
+        public PlugEnds plugCoordinates;
         public int playerId;
         public bool isNewCoordinate;
     }

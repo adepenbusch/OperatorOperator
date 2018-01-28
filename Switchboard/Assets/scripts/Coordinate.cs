@@ -15,5 +15,26 @@ namespace Assets.scripts
             x = rand.Next(0,3);
             y = rand.Next(0,3);
         }
+
+        public Coordinate(int x, int y)
+        {
+            this.x = x;
+            this.y = y;
+        }
+
+        public override bool Equals(Object obj)
+        {
+            Coordinate coordObj = obj as Coordinate;
+            if (coordObj == null)
+            {
+                return false;
+            }
+            return (x == coordObj.x && y == coordObj.y);
+        }
+
+        public override int GetHashCode()
+        {
+            return base.GetHashCode();
+        }
     }
 }
