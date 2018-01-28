@@ -51,9 +51,17 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\PlayerMove.cs" />
      <Compile Include="Assets\Prototype Materials\ShowcaseMovement.cs" />
+     <Compile Include="Assets\scripts\Coordinate.cs" />
+     <Compile Include="Assets\scripts\Cord.cs" />
      <Compile Include="Assets\scripts\GameController.cs" />
+     <Compile Include="Assets\scripts\Highlightable.cs" />
+     <Compile Include="Assets\scripts\OONetworkManager.cs" />
+     <Compile Include="Assets\scripts\Player.cs" />
      <Compile Include="Assets\scripts\Plug.cs" />
+     <Compile Include="Assets\scripts\PlugCoordinates.cs" />
+     <Compile Include="Assets\scripts\PlugMessage.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
